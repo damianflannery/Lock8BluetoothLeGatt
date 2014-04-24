@@ -212,21 +212,6 @@ public class DeviceControlActivity extends Activity {
 
         mScrollView = (ScrollView) findViewById(R.id.scrollview);
         mTextInputET = (EditText) findViewById(R.id.text_input_et);
-        /*
-        mTextInputET.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-
-                    mBluetoothLeService.writeCharacteristic(mTextInputET.getText().toString().getBytes(), mRxTxCharacteristic);
-                    mTextInputET.setText("");
-
-                    return true;
-                }
-                return false;
-            }
-        });*/
 
         mTextInputET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -254,23 +239,6 @@ public class DeviceControlActivity extends Activity {
                 return false;
             }
         });
-        /*
-        mHexInputET.setOnKeyListener(new View.OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                // If the event is a key-down event on the "enter" button
-                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
-
-                    String hex = toHex(mTextInputET.getText().toString());
-                    mBluetoothLeService.writeCharacteristic(hex.getBytes(), mRxTxCharacteristic);
-                    mHexInputET.setText("");
-
-                    return true;
-                }
-                return false;
-            }
-        });*/
-
 
         final Intent intent = getIntent();
         mDeviceName = intent.getStringExtra(EXTRAS_DEVICE_NAME);

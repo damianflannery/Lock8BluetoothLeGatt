@@ -257,7 +257,7 @@ public class DeviceScanActivity extends ListActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    //dwf
+                    //uncomment if you want to auto connect to a device with name that contains 'mcstest'
                     /*
                     if (device != null && !TextUtils.isEmpty(device.getName()) && device.getName().contains("mcstest")) {
                         Log.d(TAG, "name " + device.getName());
